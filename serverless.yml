@@ -1,0 +1,77 @@
+service: serverless-api-auth
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  environment:
+    USERS_TABLE: ${self:service}-users-table-${opt:stage, self:provider.stage}
+    ITEMS_TABLE: ${self:service}-items-table-${opt:stage, self:provider.stage}
+    USER_POOL_ID: your-user-pool-id
+    CLIENT_ID: your-client-id
+
+functions:
+  auth:
+    handler: functions/auth/handler.auth
+    events:
+      - http:
+          path: auth
+          method: post
+          cors: true
+
+  createUser:
+    handler: functions/users/handler.create
+    events:
+      - http:
+          path: users
+          method: post
+          cors: true
+
+  getItem:
+    handler: functions/items/handler.get
+    events:
+      - http:
+          path: items/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
+
+  createItem:
+    handler: functions/items/handler.create
+    events:
+      - http:
+          path: items
+          method: post
+          cors: true
+          authorizer: aws_iam
+
+resources:
+  Resources:
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.USERS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+    ItemsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:provider.environment.ITEMS_TABLE}
+        AttributeDefinitions:
+          - AttributeName: itemId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: itemId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

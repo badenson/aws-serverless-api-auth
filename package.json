@@ -1,0 +1,34 @@
+{
+  "name": "serverless-api-auth",
+  "version": "1.0.0",
+  "description": "Serverless API with authentication using AWS services",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badenson/aws-serverless-api-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/badenson/aws-serverless-api-auth/issues"
+  },
+  "homepage": "https://github.com/badenson/aws-serverless-api-auth#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "serverless-dynamodb-local": "^0.1.1",
+    "serverless-offline": "^14.4.0"
+  }
+}
