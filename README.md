@@ -12,7 +12,7 @@ A secure serverless API implementation using AWS serverless technologies with JW
 ## 📦 AWS Services Used
 
 <p align="center">
-  <img src="https://img.icons8.com/color/48/000000/amazon-api-gateway.png" title="API Gateway" width="40"/>
+  <img src="https://res.cloudinary.com/apideck/image/upload/w_128,f_auto/v1604487231/icons/amazon-api-gateway.png" title="API Gateway" width="40"/>
   <img src="https://img.icons8.com/color/48/000000/aws-lambda.png" title="Lambda" width="40"/> 
   <img src="https://img.icons8.com/color/48/000000/amazon-dynamodb.png" title="DynamoDB" width="40"/>
   <img src="https://img.icons8.com/color/48/000000/amazon-cognito.png" title="Cognito" width="40"/>
