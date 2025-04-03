@@ -14,9 +14,9 @@ A secure serverless API implementation using AWS serverless technologies with JW
 <p align="center">
   <img src="https://res.cloudinary.com/apideck/image/upload/w_128,f_auto/v1604487231/icons/amazon-api-gateway.png" title="API Gateway" width="40"/>API Gateway
   <img src="https://static-00.iconduck.com/assets.00/aws-lambda-icon-423x512-tfxr9wfa.png" title="Lambda" width="40"/>Lambda
-  <img src="https://img.icons8.com/color/48/000000/amazon-dynamodb.png" title="DynamoDB" width="40"/>
-  <img src="https://img.icons8.com/color/48/000000/amazon-cognito.png" title="Cognito" width="40"/>
-  <img src="https://img.icons8.com/color/48/000000/aws-iam.png" title="IAM" width="40"/>
+  <img src="https://static-00.iconduck.com/assets.00/aws-dynamodb-icon-1817x2048-1gi0rqbm.png" title="DynamoDB" width="40"/>DynamoDB
+  <img src="https://static-00.iconduck.com/assets.00/aws-cognito-icon-1756x2048-ayslpt3d.png" title="Cognito" width="40"/>Cognito
+  <img src="https://static-00.iconduck.com/assets.00/aws-iam-icon-268x512-16dbg6b8.png" title="IAM" width="40"/>IAM
 </p>
 
 ## 📌 Features
